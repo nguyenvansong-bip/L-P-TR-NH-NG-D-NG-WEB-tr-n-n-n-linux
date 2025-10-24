@@ -21,6 +21,7 @@ Bước 3: Kiểm tra WSL integration trong Docker
 <img width="957" height="1003" alt="Ảnh chụp màn hình 2025-10-24 210613" src="https://github.com/user-attachments/assets/7bc19b17-9442-4b08-9243-60e43d429896" />
 Bước 4: Kiểm tra Docker hoạt động
 ![Uploading Ảnh chụp màn hình 2025-10-24 223410.png…]()
+
 ![Uploading Ảnh chụp màn hình 2025-10-24 223420.png…]()
 
 
