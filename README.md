@@ -20,8 +20,11 @@ Bước 2: Cài đặt
 Bước 3: Kiểm tra WSL integration trong Docker
 <img width="957" height="1003" alt="Ảnh chụp màn hình 2025-10-24 210613" src="https://github.com/user-attachments/assets/7bc19b17-9442-4b08-9243-60e43d429896" />
 Bước 4: Kiểm tra Docker hoạt động
-xxx
-
+<img width="849" height="509" alt="Ảnh chụp màn hình 2025-10-24 223410" src="https://github.com/user-attachments/assets/82b9c417-f2c7-46ba-af44-2de54542a7d7" />
+<img width="777" height="610" alt="Ảnh chụp màn hình 2025-10-24 223420" src="https://github.com/user-attachments/assets/12a7c94d-28f1-4523-88ec-cd52dfbfecc5" />
+3. Sử dụng 1 file docker-compose.yml để cài đặt các docker container sau: 
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/1586e91b-640a-477e-b07c-1a7f4b665bba" />
+4. Lập trình web frontend+backend:
 
 
 
