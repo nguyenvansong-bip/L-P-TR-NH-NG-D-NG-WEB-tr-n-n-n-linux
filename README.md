@@ -25,6 +25,6 @@ Bước 4: Kiểm tra Docker hoạt động
 3. Sử dụng 1 file docker-compose.yml để cài đặt các docker container sau: 
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/1586e91b-640a-477e-b07c-1a7f4b665bba" />
 4. Lập trình web frontend+backend:
-
+jj
 
 
