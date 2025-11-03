@@ -1,7 +1,11 @@
-nguyễn văn song
+Nguyễn Văn Song
+
 k215480106043
+
 k57kmt
+
 bài làm
+
 Cài đặt môi trường linux
 PHẦN 1: BẬT WSL VÀ CÀI UBUNTU
 Bước 1: Bật WSL và Virtual Machine Platform
