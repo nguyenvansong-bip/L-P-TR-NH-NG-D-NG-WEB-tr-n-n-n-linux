@@ -27,6 +27,22 @@ Bước 4: Kiểm tra Docker hoạt động
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/1586e91b-640a-477e-b07c-1a7f4b665bba" />
 <img width="1107" height="615" alt="Ảnh chụp màn hình 2025-10-27 210032" src="https://github.com/user-attachments/assets/da93f22a-4210-4da4-8c8e-b2e4b616e581" />
 4. Lập trình web frontend+backend:
+Web IOT: Giám sát dữ liệu IOT.
+Tạo web dạng Single Page Application (SPA), chỉ gồm 1 file index.html, toàn bộ giao diện do javascript sinh động:
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/57111daa-a1f3-4b5c-ab2d-dd74487e8366" />
+Có tính năng login, lưu phiên đăng nhập vào cookie và session Thông tin login lưu trong cơ sở dữ liệu của mariadb, được dev quản trị bằng phpmyadmin, yêu cầu sử dụng mã hoá khi gửi login.
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/8963934e-c13b-422b-ba46-4f2ca6432ecf" />
+: Chuẩn bị môi trường
+<img width="1107" height="615" alt="Ảnh chụp màn hình 2025-10-27 210032" src="https://github.com/user-attachments/assets/672c51e8-7694-4999-9a2a-02479a70a98f" />
+: Tạo cơ sở dữ liệu
+<img width="870" height="509" alt="Ảnh chụp màn hình 2025-10-31 221610" src="https://github.com/user-attachments/assets/4db77cf6-9ee7-4d59-b043-67baa7d2b7be" />
+<img width="875" height="501" alt="Ảnh chụp màn hình 2025-10-31 221634" src="https://github.com/user-attachments/assets/cd5f2272-5cdd-464b-8651-a9c20c96ab24" />
+<img width="874" height="506" alt="Ảnh chụp màn hình 2025-10-31 221645" src="https://github.com/user-attachments/assets/e86f4dd6-d6d8-404c-af3b-b90bd7c203a2" />
+5. Nginx làm web-server
+<img width="1920" height="1080" alt="Ảnh chụp màn hình 2025-11-01 000148" src="https://github.com/user-attachments/assets/5a4126c4-2140-4162-ac01-34d6c7951044" />
+<img width="1920" height="1080" alt="Ảnh chụp màn hình 2025-11-01 000158" src="https://github.com/user-attachments/assets/76269d4f-ab02-4e6a-99a1-47392ed89c45" />
+
+
 
 
 
