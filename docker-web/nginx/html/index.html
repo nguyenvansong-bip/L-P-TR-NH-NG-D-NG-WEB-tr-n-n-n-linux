@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Giám sát IoT - Nguyễn Văn Song</title>
+<style>
+:root{
+  --main:#0078d7;
+  --bg:#f5f7fa;
+  --card:#fff;
+  --border:#ddd;
+}
+body{
+  font-family:'Segoe UI',Arial,sans-serif;
+  background:var(--bg);
+  color:#222;
+  margin:0;
+  padding:0;
+}
+header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:15px 30px;
+  background:var(--main);
+  color:white;
+  box-shadow:0 2px 4px rgba(0,0,0,0.1);
+}
+nav a{
+  color:white;
+  text-decoration:none;
+  margin:0 10px;
+  font-weight:500;
+}
+nav a:hover{text-decoration:underline;}
+main{
+  max-width:1000px;
+  margin:20px auto;
+  padding:0 20px;
+}
+.panel{
+  background:var(--card);
+  border:1px solid var(--border);
+  border-radius:8px;
+  padding:20px;
+  margin-top:20px;
+  box-shadow:0 2px 4px rgba(0,0,0,0.05);
+}
+.btn{
+  background:var(--main);
+  color:#fff;
+  border:none;
+  padding:10px 16px;
+  border-radius:5px;
+  cursor:pointer;
+  font-weight:600;
+  transition:0.2s;
+}
+.btn:hover{background:#005fa3}
+input{
+  padding:10px;
+  margin:8px 0;
+  width:100%;
+  border:1px solid #ccc;
+  border-radius:5px;
+  font-size:15px;
+}
+.flex{display:flex;gap:20px;flex-wrap:wrap}
+.card{
+  border:1px solid #eee;
+  padding:15px;
+  border-radius:8px;
+  background:#fafafa;
+  min-height:80px;
+  box-shadow:inset 0 0 4px rgba(0,0,0,0.05);
+}
+.hidden{display:none}
+.center{text-align:center}
+h2,h3{margin:0 0 10px 0}
+#userBox{font-weight:500;display:flex;align-items:center;gap:10px}
+#logoutBtn{background:#e33}
+#logoutBtn:hover{background:#c00}
+</style>
+</head>
+<body>
+<header>
+  <h2>IoT Monitor - Nguyễn Văn Song</h2>
+  <nav>
+    <a href="/nodered/" target="_blank">Node-RED</a> |
+    <a href="/grafana/" target="_blank">Grafana</a>
+  </nav>
+  <div id="userBox"></div>
+</header>
+
+<main>
+  <!-- LOGIN -->
+  <div id="loginDiv" class="panel">
+    <h3>🔐 Đăng nhập hệ thống</h3>
+    <input id="email" placeholder="Tài khoản..." />
+    <input id="password" type="password" placeholder="Mật khẩu..." />
+    <button id="btnLogin" class="btn">Đăng nhập</button>
+    <div id="loginMsg" style="color:red;margin-top:10px"></div>
+  </div>
+
+  <!-- APP -->
+  <div id="app" class="hidden">
+    <div class="panel flex">
+      <div style="flex:1">
+        <h3>📟 Giá trị cảm biến mới nhất</h3>
+        <div id="latest" class="card center">Đang tải...</div>
+        <button id="refreshBtn" class="btn" style="margin-top:10px">🔄 Làm mới</button>
+      </div>
+      <div style="flex:1;min-width:400px">
+        <h3>📊 Biểu đồ (Grafana)</h3>
+        <iframe id="grafanaFrame" src="" style="width:100%;height:300px;border:1px solid #ccc;border-radius:8px"></iframe>
+      </div>
+    </div>
+
+    <div class="panel">
+      <h3>🧪 Gửi dữ liệu cảm biến (test)</h3>
+      <input id="sensorName" placeholder="sensor_id (vd: sensor1)" />
+      <input id="sensorValue" placeholder="value (số)" />
+      <button id="sendSensor" class="btn">Gửi dữ liệu</button>
+      <div id="sendMsg" style="margin-top:10px;color:green"></div>
+    </div>
+  </div>
+</main>
+
+<script>
+// ========== LOGIN DEMO ==========
+document.getElementById('btnLogin').onclick = ()=>{
+  const email = document.getElementById('email').value.trim();
+  const pass = document.getElementById('password').value;
+  const msgBox = document.getElementById('loginMsg');
+
+  if(!email || !pass){
+    msgBox.innerText = "⚠️ Vui lòng nhập đủ tài khoản và mật khẩu!";
+    return;
+  }
+
+  // Tài khoản đúng
+  const correctUser = "k215480106043";
+  const correctPass = "123456";
+
+  if(email === correctUser && pass === correctPass){
+    msgBox.innerText = "";
+    localStorage.setItem('iot_user', email);
+    showApp(email);
+  } else {
+    msgBox.innerText = "❌ Sai tài khoản hoặc mật khẩu!";
+  }
+};
+
+// ========== HIỂN THỊ APP ==========
+function showApp(user){
+  document.getElementById('loginDiv').style.display='none';
+  document.getElementById('app').classList.remove('hidden');
+  document.getElementById('userBox').innerHTML = `
+    Xin chào, <b>${user}</b>
+    <button id="logoutBtn" class="btn">Đăng xuất</button>
+  `;
+  document.getElementById('logoutBtn').onclick = ()=>{
+    localStorage.removeItem('iot_user');
+    location.reload();
+  };
+  loadLatest();
+  loadGrafana();
+}
+
+// ========== TỰ ĐỘNG LOGIN ==========
+window.addEventListener('load', ()=>{
+  const u = localStorage.getItem('iot_user');
+  if(u) showApp(u);
+});
+
+// ========== DỮ LIỆU MẪU ==========
+function loadLatest(){
+  document.getElementById('latest').innerText = '{"sensor1": 25.6, "sensor2": 60.2}';
+}
+document.getElementById('refreshBtn').onclick = loadLatest;
+
+// ========== GỬI SENSOR ==========
+document.getElementById('sendSensor').onclick = ()=>{
+  const id = document.getElementById('sensorName').value || 'sensor1';
+  const val = document.getElementById('sensorValue').value || '0';
+  document.getElementById('sendMsg').innerText = `✅ Đã gửi ${id} = ${val}`;
+};
+
+// ========== GRAFANA ==========
+function loadGrafana(){
+  const panelUrl = "http://localhost/grafana/";
+  document.getElementById('grafanaFrame').src = panelUrl;
+}
+</script>
+</body>
+</html>
