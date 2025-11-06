@@ -108,15 +108,15 @@ Có tính năng login, lưu phiên đăng nhập vào cookie và session Thông 
 
 5. Nginx làm web-server
 
-Cấu hình nginx để chạy được website qua url http://nguyenvansong2003.com
+Cấu hình nginx để chạy được website qua url 
    
 <img width="1920" height="1080" alt="Ảnh chụp màn hình 2025-11-06 201753" src="https://github.com/user-attachments/assets/44bd7545-dcc8-4903-a66e-6d0aed443f26" />
 
-Cấu hình nginx để http://nguyenvansong2003/.com/nodered/ truy cập vào nodered qua cổng 80
+Cấu hình nginx để truy cập vào nodered qua cổng 80
 
 <img width="1920" height="1080" alt="Ảnh chụp màn hình 2025-11-06 201804" src="https://github.com/user-attachments/assets/5815afb2-4249-42ee-9205-ecf054ca7aaa" />
 
-Cấu hình nginx để http://nguyenvansong2003/grafana.com/grafana truy cập vào grafana qua cổng 80
+Cấu hình nginx để truy cập vào grafana qua cổng 80
 
 <img width="1920" height="1080" alt="Ảnh chụp màn hình 2025-11-06 201417" src="https://github.com/user-attachments/assets/201602ee-a63d-4a8b-bb69-d1f630c00f32" />
 
