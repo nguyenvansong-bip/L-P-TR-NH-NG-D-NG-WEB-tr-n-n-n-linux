@@ -107,9 +107,21 @@ Có tính năng login, lưu phiên đăng nhập vào cookie và session Thông 
 <img width="874" height="506" alt="Ảnh chụp màn hình 2025-10-31 221645" src="https://github.com/user-attachments/assets/e86f4dd6-d6d8-404c-af3b-b90bd7c203a2" />
 
 5. Nginx làm web-server
+
+Cấu hình nginx để chạy được website qua url http://nguyenvansong2003.com
    
-<img width="1920" height="1080" alt="Ảnh chụp màn hình 2025-11-01 000148" src="https://github.com/user-attachments/assets/5a4126c4-2140-4162-ac01-34d6c7951044" />
-<img width="1920" height="1080" alt="Ảnh chụp màn hình 2025-11-01 000158" src="https://github.com/user-attachments/assets/76269d4f-ab02-4e6a-99a1-47392ed89c45" />
+<img width="1920" height="1080" alt="Ảnh chụp màn hình 2025-11-06 201753" src="https://github.com/user-attachments/assets/44bd7545-dcc8-4903-a66e-6d0aed443f26" />
+
+Cấu hình nginx để http://nguyenvansong2003/.com/nodered/ truy cập vào nodered qua cổng 80
+
+<img width="1920" height="1080" alt="Ảnh chụp màn hình 2025-11-06 201804" src="https://github.com/user-attachments/assets/5815afb2-4249-42ee-9205-ecf054ca7aaa" />
+
+Cấu hình nginx để http://nguyenvansong2003/grafana.com/grafana truy cập vào grafana qua cổng 80
+
+<img width="1920" height="1080" alt="Ảnh chụp màn hình 2025-11-06 201417" src="https://github.com/user-attachments/assets/201602ee-a63d-4a8b-bb69-d1f630c00f32" />
+
+
+
 
 
 
