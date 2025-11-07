@@ -91,11 +91,11 @@ Web IOT: Giám sát dữ liệu IOT.
 
 Tạo web dạng Single Page Application (SPA), chỉ gồm 1 file index.html, toàn bộ giao diện do javascript sinh động:
 
-<img width="1920" height="1080" alt="Ảnh chụp màn hình 2025-11-06 220219" src="https://github.com/user-attachments/assets/86829450-efda-4f92-8f7c-fd83db2caaaa" />
+<img width="1778" height="1079" alt="Ảnh chụp màn hình 2025-11-07 202104" src="https://github.com/user-attachments/assets/c01e3c8c-2622-4bd7-b460-1bac8c1e74ec" />
 
 Có tính năng login, lưu phiên đăng nhập vào cookie và session Thông tin login lưu trong cơ sở dữ liệu của mariadb, được dev quản trị bằng phpmyadmin, yêu cầu sử dụng mã hoá khi gửi login.
 
-<img width="1920" height="1080" alt="Ảnh chụp màn hình 2025-11-06 220159" src="https://github.com/user-attachments/assets/8b9fc804-695a-46fe-9c60-2a21fd35f35b" />
+<img width="1770" height="1079" alt="Ảnh chụp màn hình 2025-11-07 202208" src="https://github.com/user-attachments/assets/5a0da9b7-76f5-4bfe-984e-6bd610e651f8" />
 
 : Chuẩn bị môi trường
 
@@ -103,8 +103,6 @@ Có tính năng login, lưu phiên đăng nhập vào cookie và session Thông 
 
 : Tạo cơ sở dữ liệu
 <img width="870" height="509" alt="Ảnh chụp màn hình 2025-10-31 221610" src="https://github.com/user-attachments/assets/4db77cf6-9ee7-4d59-b043-67baa7d2b7be" />
-<img width="875" height="501" alt="Ảnh chụp màn hình 2025-10-31 221634" src="https://github.com/user-attachments/assets/cd5f2272-5cdd-464b-8651-a9c20c96ab24" />
-<img width="874" height="506" alt="Ảnh chụp màn hình 2025-10-31 221645" src="https://github.com/user-attachments/assets/e86f4dd6-d6d8-404c-af3b-b90bd7c203a2" />
 
 5. Nginx làm web-server
 
