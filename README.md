@@ -91,11 +91,11 @@ Web IOT: Giám sát dữ liệu IOT.
 
 Tạo web dạng Single Page Application (SPA), chỉ gồm 1 file index.html, toàn bộ giao diện do javascript sinh động:
 
-<img width="1778" height="1079" alt="Ảnh chụp màn hình 2025-11-07 202104" src="https://github.com/user-attachments/assets/c01e3c8c-2622-4bd7-b460-1bac8c1e74ec" />
+<img width="1773" height="1079" alt="Ảnh chụp màn hình 2025-11-07 203254" src="https://github.com/user-attachments/assets/3c798f20-151e-44f7-b5de-c77d64cdd588" />
 
 Có tính năng login, lưu phiên đăng nhập vào cookie và session Thông tin login lưu trong cơ sở dữ liệu của mariadb, được dev quản trị bằng phpmyadmin, yêu cầu sử dụng mã hoá khi gửi login.
 
-<img width="1770" height="1079" alt="Ảnh chụp màn hình 2025-11-07 202208" src="https://github.com/user-attachments/assets/5a0da9b7-76f5-4bfe-984e-6bd610e651f8" />
+<img width="1769" height="1079" alt="Ảnh chụp màn hình 2025-11-07 203319" src="https://github.com/user-attachments/assets/94638e03-1cc7-4f83-be70-14dc7ef54edc" />
 
 : Chuẩn bị môi trường
 
